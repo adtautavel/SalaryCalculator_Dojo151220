@@ -17,8 +17,18 @@ namespace SalaryCalculator
         {
             get
             {
-                throw new NotImplementedException();
+                return MonthlySum();
             }
+        }
+
+        private double MonthlySum()
+        {
+            double resultat = 0;
+            foreach (Employee employee in Employees)
+            {
+                resultat += employee.MonthlySalary;
+            }
+             return resultat;
         }
 
         /// <summary>
@@ -28,8 +38,18 @@ namespace SalaryCalculator
         {
             get
             {
-                throw new NotImplementedException();
+                return YearlySum();
             }
+        }
+
+        private double YearlySum()
+        {
+            double resultat = 0;
+            foreach (Employee employee in Employees)
+            {
+                resultat += employee.MonthlySalary*12;
+            }
+            return resultat;
         }
     }
 }
