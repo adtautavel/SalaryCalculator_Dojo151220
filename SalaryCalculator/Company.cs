@@ -16,19 +16,9 @@ namespace SalaryCalculator
         public Double MonthlySalaryExpenditures 
         {
             get
-            {
-                return MonthlySum();
+            {    
+                return Employees.Sum(e => e.MonthlySalary);
             }
-        }
-
-        private double MonthlySum()
-        {
-            double resultat = 0;
-            foreach (Employee employee in Employees)
-            {
-                resultat += employee.MonthlySalary;
-            }
-             return resultat;
         }
 
         /// <summary>
@@ -38,18 +28,9 @@ namespace SalaryCalculator
         {
             get
             {
-                return YearlySum();
+                return Employees.Sum(e => e.MonthlySalary * 12);
             }
         }
-
-        private double YearlySum()
-        {
-            double resultat = 0;
-            foreach (Employee employee in Employees)
-            {
-                resultat += employee.MonthlySalary*12;
-            }
-            return resultat;
-        }
+            
     }
 }
