@@ -14,16 +14,16 @@ namespace SalaryCalculator
         public Double WeeklySalary
         {
             get
-            {
-                throw new NotImplementedException();
+            {               
+                return HourlySalary*WeekTimePeriodWorked;
             }
         }
 
         public Double DailySalary
         {
             get 
-            {
-                throw new NotImplementedException();
+            {// Corentin s'est vautré dans l'énoncé
+                return WeeklySalary/5;
             }
         }
 
@@ -31,7 +31,7 @@ namespace SalaryCalculator
         { 
             get
             {
-                throw new NotImplementedException();
+                return WeeklySalary*4;
             }
         }
     }
