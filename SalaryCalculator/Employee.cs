@@ -22,7 +22,7 @@ namespace SalaryCalculator
         public Double DailySalary
         {
             get 
-            {// Corentin s'est vautré dans l'énoncé, les employés bossent 5j/semaine et ont droi à un We!
+            {
                 return WeeklySalary/5;
             }
         }
